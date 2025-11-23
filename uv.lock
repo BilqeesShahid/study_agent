@@ -2155,6 +2155,7 @@ dependencies = [
     { name = "pypdf2" },
     { name = "python-dotenv" },
     { name = "streamlit" },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
@@ -2164,6 +2165,7 @@ requires-dist = [
     { name = "pypdf2", specifier = ">=3.0.1" },
     { name = "python-dotenv", specifier = ">=1.2.1" },
     { name = "streamlit", specifier = ">=1.51.0" },
+    { name = "uvicorn", specifier = ">=0.38.0" },
 ]
 
 [[package]]
