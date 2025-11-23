@@ -1,0 +1,8 @@
+[
+    {
+        "id": "bc00b0c66eb446ff8c92ed9560bf33c7",
+        "timestamp": "2025-11-23T22:31:16.327116",
+        "summary": "Gemini CLI is an AI-powered terminal assistant from Google that interacts with your local environment and the web, performing actions beyond simple text generation. It has built-in tools to interact with the local system (read/write files, list folders) and the external web (Google searches, fetch URLs). These tools require permission to run sensitive actions, which can be granted via `--yolomode` (risky) or `--approval-mode` (requires approval). Some key built-in tools include ReadFolder, GoogleSearch + WriteFile, WebFetch, and File Conversion. Other tools enable functions like editing files, finding files, reading multiple files, saving information to memory, searching within files, and running shell commands.\n",
+        "pdf_name": "\ud83c\udf1f Gemini CLI \u2014 Built-in Tools (Summary).pdf"
+    }
+]
