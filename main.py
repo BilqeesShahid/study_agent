@@ -8,11 +8,8 @@ from openai import OpenAI
 from tools import extract_pdf_text, generate_quiz_prompt
 
  
-from dotenv import load_dotenv
-load_dotenv()
+gemini_api_key = "AIzaSyB15KDp2NOgTqsm3ymqAORDXTHFd7KiL0"  # Your actual key
 
-# Try local env first, then Streamlit Secrets
-gemini_api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 if not gemini_api_key:
     st.error("GEMINI_API_KEY missing")
     st.stop()
@@ -22,6 +19,7 @@ client = OpenAI(
     api_key=gemini_api_key,
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
+
 
 st.set_page_config(layout="wide")
 st.title("📘 Study Notes Summarizer & Quiz Generator")
