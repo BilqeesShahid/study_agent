@@ -8,9 +8,11 @@ from openai import OpenAI
 from tools import extract_pdf_text, generate_quiz_prompt
 
  
-# Read secret from Streamlit
-gemini_api_key = st.secrets["GEMINI_API_KEY"]
+from dotenv import load_dotenv
+load_dotenv()
 
+# Try local env first, then Streamlit Secrets
+gemini_api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 if not gemini_api_key:
     st.error("GEMINI_API_KEY missing")
     st.stop()
