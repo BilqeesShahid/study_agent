@@ -4,12 +4,10 @@ import uuid
 import json
 import datetime
 import streamlit as st
-from dotenv import load_dotenv
 from openai import OpenAI
 from tools import extract_pdf_text, generate_quiz_prompt
 
-# Load env
-load_dotenv()
+ 
 # Read secret from Streamlit
 gemini_api_key = st.secrets["GEMINI_API_KEY"]
 
