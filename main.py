@@ -6,14 +6,17 @@ import datetime
 import streamlit as st
 from openai import OpenAI
 from tools import extract_pdf_text, generate_quiz_prompt
+from dotenv import load_dotenv
 
- 
-gemini_api_key = "AIzaSyB15KDp2NOgTqsm3ymqAORDXTHFd7KiL0"  # Your actual key
+# Load local .env for development
+load_dotenv()
+
+# Use local env or Streamlit secret
+gemini_api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 
 if not gemini_api_key:
     st.error("GEMINI_API_KEY missing")
     st.stop()
-
 # Correct Gemini OpenAI-Compatible client
 client = OpenAI(
     api_key=gemini_api_key,
