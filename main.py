@@ -10,7 +10,8 @@ from tools import extract_pdf_text, generate_quiz_prompt
 
 # Load env
 load_dotenv()
-gemini_api_key = os.getenv("GEMINI_API_KEY")
+# Read secret from Streamlit
+gemini_api_key = st.secrets["GEMINI_API_KEY"]
 
 if not gemini_api_key:
     st.error("GEMINI_API_KEY missing")
